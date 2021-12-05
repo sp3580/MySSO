@@ -4,6 +4,6 @@
 使用範例網域
 `C:\Windows\System32\drivers\etc\hosts`
 
-127.0.0.1     admin.test.com
-127.0.0.1     login.test.com
-127.0.0.1     www.test.com
+    127.0.0.1     admin.test.com
+    127.0.0.1     login.test.com
+    127.0.0.1     www.test.com
