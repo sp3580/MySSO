@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-container">
+    <h2>使用者登入</h2>
+</div>
+
+<div class="login-container">
+    <form>
+        <div class="row">
+            <label for="Account">帳號</label>
+            <input type="text" id="Account" placeholder="請輸入帳號"  required="required"/>
+        </div>
+        <div class="row">
+            <label for="Password">密碼</label>
+            <input type="text" id="Password" placeholder="請輸入密碼"  required="required"/>
+        </div>
+    </form>
+    <button id="login">Login</button>
+</div>
+
+
+
+
+<style>
+    .login-container{
+        text-align: center;
+        margin-top: 5em;
+    }
+    .row{
+        display: block;
+    }
+    input{
+        margin: 10px;
+        padding: 10px;
+    }
+    button{
+        border: none;
+        height: 3em;
+        border-radius: 3px;
+        width: 50%;
+        margin-top: 5px;
+    }
+</style>
+
+@section Scripts {   
+    <script>
+        $(function() {
+            $("#login").click(function(){
+                let account = $("#Account").val() == undefined ? '' : $("#Account").val().trim();
+                let pwd = $("#Password").val() == undefined ? '' : $("#Password").val().trim();
+                if(account.trim().length==0 || pwd.trim().length==0){
+                    alert("請輸入帳號或密碼");
+                    return false;
+                }
+                $.ajax({
+                    type: "post",
+                    contentType: "application/json",
+                    url: "Login/Login",
+                    data: JSON.stringify({ "account" : account, "pwd" : pwd }),
+                    success: function (result) {
+                       if(result.length!=0){
+                           alert(result);
+                       }else{
+                           window.location.href = "/Home/Index";
+                       }
+                    }
+               })
+            });
+        });
+    </script>
+}

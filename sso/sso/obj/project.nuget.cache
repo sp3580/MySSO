@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yC2VdfP1LhiyMvgdpaIf9v/4XdyFp/DU5TSE/kqw9Quhu8PpfAsbltAqglb4K3Y5LM4lHIW00jO7aTuqf58K4g==",
+  "success": true,
+  "projectFilePath": "C:\\Sharon_person\\MySSO\\sso\\sso\\sso.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SNOW\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512"
+  ],
+  "logs": []
+}
