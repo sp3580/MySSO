@@ -32,7 +32,6 @@ namespace SSOTEST.Controllers
                     // new Claim("FullName", info.pwd),
                      new Claim(ClaimTypes.Role, "Administrator")
                 };
-
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
                 return Json("");

@@ -23,9 +23,7 @@ namespace sso.Controllers
         [Authorize]
         public IActionResult Index()
         {
-            //var userId = HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
-            //string cookie = Request.Cookies["Key"];
-            //ViewBag.Cookie = userId + "test1111";
+            ViewBag.Cookie = HttpContext.User.Claims.First().Value;
             return View();
         }
 

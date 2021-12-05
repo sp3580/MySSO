@@ -31,7 +31,7 @@ namespace sso
                 //砞﹚参Cookie嘿
                 option.Cookie.Name = "TestCookie";
                 //砞﹚Cookie办办硂妓┮Τ办常祇瞷硂Cookie
-                option.Cookie.Domain = "localhost";
+                option.Cookie.Domain = "test.com";
                 //ゼ祅穦笆旧硂呼
                 option.LoginPath = new PathString("/Login/Index");
                 option.SlidingExpiration = false;
